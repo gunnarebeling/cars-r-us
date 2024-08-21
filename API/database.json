@@ -105,6 +105,20 @@
       "technologiesId": 2,
       "wheelsId": 1,
       "id": 2
+    },
+    {
+      "colorsId": 3,
+      "interiorsId": 2,
+      "technologiesId": 3,
+      "wheelsId": 3,
+      "id": 3
+    },
+    {
+      "colorsId": 2,
+      "interiorsId": 3,
+      "technologiesId": 2,
+      "wheelsId": 3,
+      "id": 4
     }
   ]
 }
