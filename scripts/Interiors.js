@@ -1,4 +1,12 @@
+import { setInterior } from "./transientState.js";
 
+
+const interiorSelected = (event) =>{
+    if (event.target.id === "interior") {
+        setInterior(event.target.value)
+    }
+}
+document.addEventListener("change", interiorSelected)
 export const InteriorHTML= async () => {
     const response = await fetch("http://localhost:8088/interiors");
     const interiors = await response.json();

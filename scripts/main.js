@@ -45,6 +45,6 @@ const render = async () =>{
     const mainTarget = document.querySelector("#main");
     mainTarget.innerHTML = html;
 }
-
+document.addEventListener("orderSubmit", render);
 
 render();

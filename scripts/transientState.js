@@ -6,27 +6,45 @@ let transientState =
     wheelsId: 0,
 }
 
-export const setPaint = (event) =>{
-    if (event.target.id === "paint") {
-        transientState.paintsId = event.target.value
-    }
+export const setPaint = (currentState) =>{
+        transientState.paintsId = currentState
+        
 
 }
-export const setInterior = (event) =>{
-    if (event.target.id === "interior") {
-        transientState.interiorsId = event.target.value
-    }
+export const setInterior = (currentState) =>{
+    
+        transientState.interiorsId = currentState
+        
+        
+    
 
 }
-export const setTechnology = (event) =>{
-    if (event.target.id === "technology") {
-        transientState.technologiesId = event.target.value
-    }
+export const setTechnology = (currentState) =>{
+    
+        transientState.technologiesId = currentState
+        
 
 }
-export const setWheels = (event) =>{
-    if (event.target.id === "Wheels") {
-        transientState.wheelsId = event.target.value
-    }
+export const setWheels = (currentState) =>{
+    
+        transientState.wheelsId = currentState
+        
 
+}
+
+export const submitOrder = async () => {
+    const postOptions = 
+    {
+        method: "POST",
+        header: 
+        {   
+            "Content-Type": "application/json"
+
+        },
+        body: JSON.stringify(transientState)
+
+    }
+    const response = await fetch("http://localhost:8088/orders", postOptions);
+    const submitCall = new CustomEvent("orderSubmit");
+    document.dispatchEvent(submitCall);
 }
