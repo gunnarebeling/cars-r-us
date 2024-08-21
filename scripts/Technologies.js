@@ -2,13 +2,13 @@ import { setTechnology } from "./transientState.js";
 
 const technologySelected = (event) =>{
     if (event.target.id === "technology") {
-        setTechnology(event.target.value)
+        setTechnology(parseInt(event.target.value))
     }
 }
 document.addEventListener("change", technologySelected)
 
 export const TechnologiesHTML= async () => {
-    const response = await fetch("http://localhost:8088/technology");
+    const response = await fetch("http://localhost:8088/technologies");
     const technologies = await response.json();
     let html = `<select id="technology">`
 

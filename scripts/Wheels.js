@@ -2,7 +2,7 @@ import { setWheels } from "./transientState.js";
 
 const wheelsSelected = (event) =>{
     if (event.target.id === "wheels") {
-        setWheels(event.target.value)
+        setWheels(parseInt(event.target.value))
     }
 }
 document.addEventListener("change", wheelsSelected)

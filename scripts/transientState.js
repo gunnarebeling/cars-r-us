@@ -1,13 +1,13 @@
 let transientState = 
 {
-    paintsId: 0,
-    interiorsId: 0,
-    technologiesId: 0,
-    wheelsId: 0,
+    colorsId: 1,
+    interiorsId: 1,
+    technologiesId: 1,
+    wheelsId: 1,
 }
 
 export const setPaint = (currentState) =>{
-        transientState.paintsId = currentState
+        transientState.colorsId = currentState
         
 
 }
@@ -36,7 +36,7 @@ export const submitOrder = async () => {
     const postOptions = 
     {
         method: "POST",
-        header: 
+        headers: 
         {   
             "Content-Type": "application/json"
 

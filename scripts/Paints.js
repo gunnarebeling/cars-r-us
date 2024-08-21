@@ -2,7 +2,7 @@ import { setPaint } from "./transientState.js";
 
 const paintSelected = (event) =>{
     if (event.target.id === "paint") {
-        setPaint(event.target.value)
+        setPaint(parseInt(event.target.value))
     }
 }
 document.addEventListener("change", paintSelected)

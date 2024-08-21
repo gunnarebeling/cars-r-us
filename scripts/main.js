@@ -1,4 +1,5 @@
 import { InteriorHTML } from "./Interiors.js";
+import { OrdersList, SubmitButton } from "./Orders.js";
 import { PaintHTML } from "./Paints.js";
 import { TechnologiesHTML } from "./Technologies.js";
 import { WheelsHTML } from "./Wheels.js";
@@ -8,6 +9,8 @@ const render = async () =>{
     const interiorHTML = await InteriorHTML();
     const technologiesHTML = await TechnologiesHTML();
     const wheelsHTML = await WheelsHTML();
+    const submitbuttonHTML = SubmitButton();
+    const orderHTML = await OrdersList()
     
     const html = `
         <h1>CARS-R-US</h1>
@@ -33,11 +36,15 @@ const render = async () =>{
                     <!--wheelsHTML-->
                     ${wheelsHTML}
                 </div>
+                <div>
+                    ${submitbuttonHTML}
+                </div>
             </div>
             <div id="orders">
                 <h2>Orders</h2>
                 <div>
                     <!--ordersList-->
+                    ${orderHTML}
                 </div>
             </div>
         </div>`

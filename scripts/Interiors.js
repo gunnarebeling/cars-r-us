@@ -3,7 +3,7 @@ import { setInterior } from "./transientState.js";
 
 const interiorSelected = (event) =>{
     if (event.target.id === "interior") {
-        setInterior(event.target.value)
+        setInterior(parseInt(event.target.value))
     }
 }
 document.addEventListener("change", interiorSelected)
